@@ -36,10 +36,3 @@ public class RadioGrupoX implements Radio {
 
 }
 
-public class Main {
-    static void main() {
-        Radio radio = new RadioGrupoX();
-        radio.prenderRadio();
-    }
-
-}
