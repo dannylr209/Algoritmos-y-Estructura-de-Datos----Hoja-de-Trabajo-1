@@ -9,6 +9,31 @@ public class RadioGrupoX implements Radio {
         System.out.println("Radio Grupo X apagada");
     }
 
+    @Override
+    public void avanzarEstacion() {
+
+    }
+
+    @Override
+    public void guardarEstacion(int numeroBoton) {
+
+    }
+
+    @Override
+    public void cargarEstacion(int numeroBoton) {
+
+    }
+
+    @Override
+    public void cambiarFM() {
+
+    }
+
+    @Override
+    public void cambiarAM() {
+
+    }
+
 }
 
 public class Main {
