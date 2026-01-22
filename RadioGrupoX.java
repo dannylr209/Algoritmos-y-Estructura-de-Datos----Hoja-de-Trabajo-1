@@ -13,7 +13,7 @@ public class RadioGrupoX implements Radio {
     @Override
     public void prenderRadio() {
         encendido = true;
-        Scanner sc = new Scanner(system.in);
+        Scanner sc = new Scanner(System.in);
 
         while (encendido) {
             System.out.println("\n===== RADIO =====")
@@ -130,6 +130,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
