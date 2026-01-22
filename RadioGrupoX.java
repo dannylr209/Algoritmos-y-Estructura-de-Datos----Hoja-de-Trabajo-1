@@ -84,11 +84,30 @@ public class RadioGrupoX implements Radio {
 
     @Override
     public void guardarEstacion(int numeroBoton) {
+         if (!encendido)
+            return;
+        if (numeroBoton < 1 || numeroBoton > 12)
+            return;
+
+        int index = numeroBoton - 1;
+        botonesFrecuencia[index] = estacionActual;
+        botonesEsFM[index] = esFM;
 
     }
 
     @Override
     public void cargarEstacion(int numeroBoton) {
+        if (!encendido)
+            return;
+        if (numeroBoton < 1 || numeroBoton > 12)
+            return;
+
+        int index = numeroBoton - 1;
+
+        if (botonesFrecuencia[index] != 0) {
+            estacionActual = botonesFrecuencia[index];
+            esFM = botonesEsFM[index];
+        }
 
     }
 
@@ -111,6 +130,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
