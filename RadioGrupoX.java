@@ -59,7 +59,7 @@ public class RadioGrupoX implements Radio {
 
     @Override
     public void apagarRadio() {
-        System.out.println("Radio Grupo X apagada");
+        encendido = false;
     }
 
     @Override
@@ -88,6 +88,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
