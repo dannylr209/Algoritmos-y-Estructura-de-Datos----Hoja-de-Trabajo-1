@@ -6,7 +6,9 @@ public class RadioGrupoX implements Radio {
     private boolean esFM = true;
     private double estacionActual = 87.9;
     //Se crea una lista donde se guardaran las estaciones
-    private double[] botones = new double[12];
+    //Y tambien para mantener control de en que tipo de radio se esta
+    private double[] botonesFrecuencia = new double[12];
+    private boolean[] botonesEsFM = new boolean[12];
 
     @Override
     public void prenderRadio() {
@@ -44,6 +46,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
