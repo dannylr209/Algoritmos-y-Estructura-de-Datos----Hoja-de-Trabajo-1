@@ -79,15 +79,24 @@ public class RadioGrupoX implements Radio {
 
     @Override
     public void cambiarFM() {
+        if (!encendido)
+            return;
+        esFM = true;
+        estacionActual = 87.9;
 
     }
 
     @Override
     public void cambiarAM() {
+         if (!encendido)
+            return;
+        esFM = false;
+        estacionActual = 530;
 
     }
 
 }
+
 
 
 
