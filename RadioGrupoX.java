@@ -16,7 +16,7 @@ public class RadioGrupoX implements Radio {
         Scanner sc = new Scanner(System.in);
 
         while (encendido) {
-            System.out.println("\n===== RADIO =====")
+            System.out.println("\n===== RADIO =====");
             System.out.println("Banda: " + (esFM ? "FM" : "AM"));
             System.out.println("Estación actual: " + estacionActual);
             System.out.println("1. Cambiar AM / FM");
@@ -130,6 +130,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
