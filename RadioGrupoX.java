@@ -64,6 +64,21 @@ public class RadioGrupoX implements Radio {
 
     @Override
     public void avanzarEstacion() {
+         if (!encendido)
+            return;
+
+        if (esFM) {
+            estacionActual += 0.2;
+            //Cuando llega al final vuelve al inicio
+            if (estacionActual > 107.9) {
+                estacionActual = 87.9;
+            }
+        } else {
+            estacionActual += 10;
+            if (estacionActual > 1610) {
+                estacionActual = 530;
+            }
+        }
 
     }
 
@@ -96,6 +111,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
