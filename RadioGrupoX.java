@@ -12,7 +12,49 @@ public class RadioGrupoX implements Radio {
 
     @Override
     public void prenderRadio() {
-        System.out.println("Radio Grupo X prendida");
+        encendido = true;
+        Scanner sc = new Scanner(system.in);
+
+        while (encendido) {
+            System.out.println("\n===== RADIO =====")
+            System.out.println("Banda: " + (esFM ? "FM" : "AM"));
+            System.out.println("Estación actual: " + estacionActual);
+            System.out.println("1. Cambiar AM / FM");
+            System.out.println("2. Avanzar estación");
+            System.out.println("3. Guardar estación");
+            System.out.println("4. Cargar estación");
+            System.out.println("5. Apagar radio");
+            System.out.print("Opción: ");
+
+            int opcion = sc.nextInt();
+
+             switch (opcion) {
+                case 1:
+                    if (esFM)
+                        cambiarAM();
+                    else
+                        cambiarFM();
+                    break;
+
+                case 2:
+                    avanzarEstacion();
+                    break;
+
+                case 3:
+                    System.out.print("Botón (1-12): ");
+                    guardarEstacion(sc.nextInt());
+                    break;
+
+                case 4:
+                    System.out.print("Botón (1-12): ");
+                    cargarEstacion(sc.nextInt());
+                    break;
+
+                case 5:
+                    apagarRadio();
+                    break;
+            }
+        }
     }
 
     @Override
@@ -46,6 +88,7 @@ public class RadioGrupoX implements Radio {
     }
 
 }
+
 
 
 
