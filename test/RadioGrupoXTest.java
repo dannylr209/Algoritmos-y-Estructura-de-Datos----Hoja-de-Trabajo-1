@@ -82,27 +82,6 @@ public class RadioGrupoXTest {
         assertTrue(esFM.getBoolean(radio)); // Debe volver a FM
     }
 
-    @Test
-    public void pruebaIncorrecta_NoCambiaBandaAlCargar() throws Exception {
-        RadioGrupoX radio = new RadioGrupoX();
-        encenderSinMenu(radio);
-
-        // Guardamos una estación AM
-        radio.cambiarAM(); // 530
-        radio.avanzarEstacion(); // 540
-        radio.guardarEstacion(3);
-
-        // Cambiamos a FM
-        radio.cambiarFM();
-
-        // Cargamos la estación AM guardada
-        radio.cargarEstacion(3);
-
-        Field esFM = RadioGrupoX.class.getDeclaredField("esFM");
-        esFM.setAccessible(true);
-
-        // suponemos que esta en FM
-        assertTrue(esFM.getBoolean(radio));
-    }
 
 }
+
